@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Association | KAE:BYOK</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Animation Glow pour le titre -->
+  <style>
+    @keyframes glow-title {
+      0% {
+        text-shadow: 0 0 10px #a56537, 0 0 20px #b18aff, 0 0 30px #ff7eb9;
+        transform: scale(1);
+      }
+      50% {
+        text-shadow: 0 0 20px #510a05, 0 0 35px #b18aff, 0 0 40px #ff7eb9;
+        transform: scale(1.05);
+      }
+      100% {
+        text-shadow: 0 0 10px #7c3f0a, 0 0 20px #ff7eb9, 0 0 30px #b18aff;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <img src="logo.png" alt="Logo KAE:BYOK" class="menu-logo">
+    <ul class="menu-right">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="association.html">Association</a></li>
+      <li><a href="activites.html">Activités</a></li>
+      <li><a href="evenements.html">Événements</a></li>
+      <li><a href="galerie.html">Galerie</a></li>
+      <li><a href="notre-equipe.html">Notre Equipe</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- HERO / TITRE DE PAGE -->
+  <section style="padding:150px 20px 80px; text-align:center;">
+    <h1 style="
+        font-size: 80px;
+        font-weight: 900;
+        color: #eeafd1;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        text-shadow: 0 0 10px #ff7eb9, 0 0 20px #e29237, 0 0 30px #ff7eb9;
+        animation: glow-title 2s ease-in-out infinite alternate;
+    ">Association</h1>
+     <p style="color: #621010 var(--soft-peach); font-size: 20px; margin-top:20px;">
+      Danse K-Pop • Scène • Communauté
+    </p>
+  </section>
+
+
+    <!-- QUI SOMMES-NOUS -->
+    <section class="card glow text-center">
+      <h2>Qui sommes-nous ?</h2>
+      <p>
+        KAE:BYOK est une association dédiée à la danse K-Pop, aux performances
+        scéniques et aux événements culturels.  
+        Nous créons un espace où la passion, l’énergie et la créativité se rencontrent.
+      </p>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- HISTOIRE -->
+    <section class="card glow">
+      <h2 class="section-title">Notre histoire</h2>
+      <p>
+        Fondée par des passionnés de K-Pop, KAE:BYOK est née de l’envie de partager la culture coréenne
+        à travers la danse, la scène et l’esprit de groupe.  
+        L’association a pour objectif de promouvoir la culture coréenne et la K-Pop
+        grâce à des activités artistiques, des prestations scéniques et des projets créatifs.
+      </p>
+      <p>
+        Le nom <strong>KAE:BYOK</strong> symbolise le lien entre la culture coréenne et le dépassement de soi :
+        <strong>Kae</strong> = Korea, <strong>Ae</strong> = Aeternum (connexion profonde), 
+        <strong>:</strong> = Lien, <strong>Byok</strong> = Mur / dépassement de soi.
+      </p>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- VALEURS -->
+    <section class="card glow">
+      <h2 class="section-title">Nos valeurs</h2>
+      <ul style="max-width:600px; margin:20px auto; list-style: disc; padding-left:20px;">
+        <li>Passion et engagement</li>
+        <li>Partage et entraide</li>
+        <li>Créativité et performance</li>
+        <li>Respect et inclusion</li>
+      </ul>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- GROUPE DE DANSE -->
+    <section class="card glow">
+      <h2 class="section-title">Le groupe de danse CTRL-Cover</h2>
+      <p>
+        CTRL-Cover est le groupe officiel de l’association KAE:BYOK.  
+        L’association a été créée par trois membres du groupe Aether Crew, animés par la passion
+        de la danse K-Pop, de la scène et du partage artistique.
+      </p>
+      <p>
+        Le groupe participe à des prestations scéniques, des projets vidéo et des événements culturels.
+        Il est ouvert à tous les niveaux : débutants motivés comme danseurs confirmés.
+      </p>
+      <p>
+        L’objectif du groupe n’est pas seulement la performance, mais aussi la progression collective,
+        l’expression artistique, la cohésion et le dépassement de soi.
+      </p>
+    </section>
+
+    <div class="section-divider"></div>
+
+   
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 KAE:BYOK — Association K-Pop</p>
+  </footer>
+
+  <!-- SCRIPT MENU -->
+  <script>
+    fetch('menu.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
+  </script>
+
+</body>
+</html>

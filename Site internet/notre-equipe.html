@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notre Équipe | KAE:BYOK</title>
+   <!-- CSS -->
+   <link rel="stylesheet" href="style.css">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+ 
+   <!-- Animation Glow pour le titre -->
+   <style>
+     @keyframes glow-title {
+       0% {
+         text-shadow: 0 0 10px #a56537, 0 0 20px #b18aff, 0 0 30px #ff7eb9;
+         transform: scale(1);
+       }
+       50% {
+         text-shadow: 0 0 20px #510a05, 0 0 35px #b18aff, 0 0 40px #ff7eb9;
+         transform: scale(1.05);
+       }
+       100% {
+         text-shadow: 0 0 10px #7c3f0a, 0 0 20px #ff7eb9, 0 0 30px #b18aff;
+         transform: scale(1);
+       }
+     }
+   </style>
+ </head>
+ 
+ <body>
+<!-- HEADER -->
+<header>
+  <img src="logo.png" alt="Logo KAE:BYOK" class="menu-logo">
+  <ul class="menu-right">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="association.html">Association</a></li>
+    <li><a href="activites.html">Activités</a></li>
+    <li><a href="evenements.html">Événements</a></li>
+    <li><a href="galerie.html">Galerie</a></li>
+    <li><a href="notre-equipe.html">Notre Equipe</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</header>
+
+ <!-- HERO / TITRE DE PAGE -->
+ <section style="padding:150px 20px 80px; text-align:center;">
+  <h1 style="
+      font-size: 80px;
+      font-weight: 900;
+      color: #eeafd1;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      text-shadow: 0 0 10px #ff7eb9, 0 0 20px #e29237, 0 0 30px #ff7eb9;
+      animation: glow-title 2s ease-in-out infinite alternate;
+  ">Notre Equipe</h1>
+  <p class="subtitle">Passion • Créativité • K-Pop </p>
+</section>
+
+<main class="page">
+
+  <!-- INTRO -->
+  <section class="card glow text-center">
+    <h2 class="section-title">Découvrez notre équipe</h2>
+    <p>
+      Derrière KAE:BYOK, une équipe passionnée anime chaque projet : danse, performances et événements.  
+      De l'encadrement des stages à la création de spectacles, nous travaillons ensemble pour partager notre passion de la K-Pop.
+    </p>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- MEMBRES -->
+  <section class="card glow">
+    <h2 class="section-title">Les membres fondateurs</h2>
+
+    <div class="team-grid">
+      
+      <!-- MEMBRE 1 -->
+      <div class="team-member">
+        <img src="membre1.jpg" alt="Nom Membre 1">
+        <h3>DIALLO Mabintou</h3>
+        <p>Co-fondatrice • Présidente</p>
+      </div>
+
+      <!-- MEMBRE 2 -->
+      <div class="team-member">
+        <img src="membre2.jpg" alt="Nom Membre 2">
+        <h3>PERDYA BELKHA Mariah</h3>
+        <p>Co-fondatrice • Trésorière</p>
+      </div>
+
+      <!-- MEMBRE 3 -->
+      <div class="team-member">
+        <img src="membre3.jpg" alt="Nom Membre 3">
+        <h3>MANANGA Target Ortoland</h3>
+        <p>Co-fondateur • Secrétaire</p>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 KAE:BYOK — Association K-Pop</p>
+</footer>
+
+<!-- SCRIPT MENU -->
+<script>
+  fetch('menu.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+    });
+</script>
+
+</body>
+</html>

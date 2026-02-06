@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CTRL-Cover | Galerie</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Animation Glow pour le titre -->
+  <style>
+    @keyframes glow-title {
+      0% {
+        text-shadow: 0 0 10px #a56537, 0 0 20px #b18aff, 0 0 30px #ff7eb9;
+        transform: scale(1);
+      }
+      50% {
+        text-shadow: 0 0 20px #510a05, 0 0 35px #b18aff, 0 0 40px #ff7eb9;
+        transform: scale(1.05);
+      }
+      100% {
+        text-shadow: 0 0 10px #7c3f0a, 0 0 20px #ff7eb9, 0 0 30px #b18aff;
+        transform: scale(1);
+      }
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: transform 0.4s, box-shadow 0.4s;
+      cursor: pointer;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.1) rotate(2deg);
+      box-shadow: 0 8px 25px rgba(255,123,180,0.6);
+    }
+  </style>
+</head>
+
+<body>
+
+   <!-- HEADER -->
+   <header>
+    <img src="logo.png" alt="Logo KAE:BYOK" class="menu-logo">
+    <ul class="menu-right">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="association.html">Association</a></li>
+      <li><a href="activites.html">Activités</a></li>
+      <li><a href="evenements.html">Événements</a></li>
+      <li><a href="galerie.html">Galerie</a></li>
+      <li><a href="notre-equipe.html">Notre Equipe</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </header>
+  
+
+  <!-- HERO / TITRE DE PAGE -->
+  <section style="padding:150px 20px 80px; text-align:center;">
+    <h1 style="
+        font-size: 80px;
+        font-weight: 900;
+        color: #eeafd1;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        text-shadow: 0 0 10px #ff7eb9, 0 0 20px #e29237, 0 0 30px #ff7eb9;
+        animation: glow-title 2s ease-in-out infinite alternate;
+    ">Galerie</h1>
+     <p style="color: #621010 var(--soft-peach); font-size: 20px; margin-top:20px;">
+      Découvrez nos moments forts et performances en images 📸
+    </p>
+  </section>
+
+  <!-- GALERIE D'IMAGES -->
+  <main>
+    <section class="gallery-grid">
+      <img src="photo1.jpg" alt="Entrainement">
+      <img src="photo2.jpg" alt="Entrainement 2">
+      <img src="photo3.jpg" alt="Entrainement 3">
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer style="text-align:center; padding:30px 20px;">
+    <p>© 2026 KAE:BYOK — Association K-Pop</p>
+    <p>Instagram : @association_kaebyok | YouTube : CTRL-Cover</p>
+  </footer>
+
+  <!-- SCRIPT MENU COMMUN -->
+  <script>
+    fetch('menu.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
+  </script>
+
+</body>
+</html>

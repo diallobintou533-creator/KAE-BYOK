@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CTRL-Cover | Activités</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Animation Glow pour le titre -->
+  <style>
+    @keyframes glow-title {
+      0% {
+        text-shadow: 0 0 10px #a56537, 0 0 20px #b18aff, 0 0 30px #ff7eb9;
+        transform: scale(1);
+      }
+      50% {
+        text-shadow: 0 0 20px #510a05, 0 0 35px #b18aff, 0 0 40px #ff7eb9;
+        transform: scale(1.05);
+      }
+      100% {
+        text-shadow: 0 0 10px #7c3f0a, 0 0 20px #ff7eb9, 0 0 30px #b18aff;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <img src="logo.png" alt="Logo KAE:BYOK" class="menu-logo">
+    <ul class="menu-right">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="association.html">Association</a></li>
+      <li><a href="activites.html">Activités</a></li>
+      <li><a href="evenements.html">Événements</a></li>
+      <li><a href="galerie.html">Galerie</a></li>
+      <li><a href="notre-equipe.html">Notre Equipe</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- HERO / TITRE DE PAGE -->
+  <section style="padding:150px 20px 80px; text-align:center;">
+    <h1 style="
+        font-size: 80px;
+        font-weight: 900;
+        color: #eeafd1;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        text-shadow: 0 0 10px #ff7eb9, 0 0 20px #e29237, 0 0 30px #ff7eb9;
+        animation: glow-title 2s ease-in-out infinite alternate;
+    ">Activités</h1>
+  <p style="color: #621010 var(--soft-peach); font-size: 20px; margin-top:20px;">
+      Rejoins nos stages et ateliers pour vivre la K-Pop intensément 🎶
+    </p>
+  </section>
+
+  <!-- CONTENU PRINCIPAL -->
+  <main style="display:flex; flex-direction:column; gap:40px; max-width:900px; margin:auto; padding:20px;">
+
+    <div class="card glow">
+      <h2>Stage Débutants</h2>
+      <p>Apprends les bases de la danse K-Pop dans une ambiance conviviale et dynamique.</p>
+      <p><strong>Niveau :</strong> Débutant</p>
+      <p><strong>Date :</strong> 15 Mars 2026</p>
+      <button class="btn-main">S'inscrire</button>
+    </div>
+
+    <div class="card glow">
+      <h2>Stage Avancés</h2>
+      <p>Perfectionne tes mouvements et travaille des chorégraphies plus complexes.</p>
+      <p><strong>Niveau :</strong> Avancé</p>
+      <p><strong>Date :</strong> 22 Mars 2026</p>
+      <button class="btn-main">S'inscrire</button>
+    </div>
+
+    <d

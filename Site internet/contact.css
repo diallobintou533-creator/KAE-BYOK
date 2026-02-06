@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #0e0e0e;
+    color: #fff6ee;
+  }
+  
+  /* SECTION */
+  .contact-section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2.8rem;
+    color: #ff9ea6; /* rose du logo */
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    margin-bottom: 50px;
+    color: #ffd9cc;
+  }
+  
+  /* CONTAINER */
+  .contact-container {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+  
+  /* FORMULAIRE */
+  .contact-form {
+    flex: 1;
+    min-width: 320px;
+    background: #fff6ee;
+    color: #3b2a1f;
+    padding: 35px;
+    border-radius: 25px;
+    box-shadow: 0 0 30px rgba(255, 158, 166, 0.25);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  .contact-form label {
+    margin-top: 18px;
+    font-weight: 600;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    margin-top: 6px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 2px solid #ffd9cc;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: #ff9ea6;
+    box-shadow: 0 0 10px rgba(255, 158, 166, 0.5);
+  }
+  
+  /* BOUTON */
+  .contact-form button {
+    margin-top: 25px;
+    padding: 14px;
+    border: none;
+    border-radius: 14px;
+    background: #d97a2b;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .contact-form button:hover {
+    background: #ff9ea6;
+    transform: scale(1.05);
+  }
+  
+  /* INFOS */
+  .contact-info {
+    flex: 1;
+    min-width: 280px;
+    text-align: left;
+    padding: 20px;
+  }
+  
+  .contact-info h2 {
+    font-size: 1.8rem;
+    color: #d97a2b;
+  }
+  
+  .info-block {
+    margin-top: 28px;
+    padding: 18px;
+    border-radius: 18px;
+    background: #1a1a1a;
+    border: 1px solid #3b2a1f;
+  }
+  
+  .info-block h3 {
+    margin-bottom: 6px;
+    color: #ff9ea6;
+  }
+  
+  .bottom-note {
+    margin-top: 60px;
+    font-style: italic;
+    color: #ffd9cc;
+  }
+  
+  /* MOBILE */
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+    }
+  
+    h1 {
+      font-size: 2.2rem;
+    }
+  }
